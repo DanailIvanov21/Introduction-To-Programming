@@ -3,9 +3,9 @@
 Деклрация на променлива:
 <тип> <име> = (<стойност>)
 
-<тип> <име> = (<стойност>)
 
-Примитивни типов:
+
+Примитивни типовe:
 
 Целочислен тип (int, short, long ..)
 
@@ -14,6 +14,19 @@
 Булев тип (bool)
 
 Символен тип (char)
+
+Примитивни типове данни (built-in types)
+Тип	Памет	Стойности
+char	1 byte	-127 to 127 or 0 to 255
+int	4 bytes	-2147483648 to 2147483647
+signed int	4 bytes	same as int
+unsigned int	4 bytes	0 to 4294967295
+short int	2 bytes	-32768 to 32767
+signed short int	2 bytes	same as short int
+unsigned short int	2 bytes	0 to 65,535
+float	4 bytes	
+double	4 bytes	
+bool	1 byte	
 
 
 
