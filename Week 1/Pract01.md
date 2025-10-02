@@ -15,20 +15,10 @@
 
 Символен тип (char)
 
-Примитивни типове данни (built-in types)
-Тип	Памет	Стойности
-char	1 byte	-127 to 127 or 0 to 255
-int	4 bytes	-2147483648 to 2147483647
-signed int	4 bytes	same as int
-unsigned int	4 bytes	0 to 4294967295
-short int	2 bytes	-32768 to 32767
-signed short int	2 bytes	same as short int
-unsigned short int	2 bytes	0 to 65,535
-float	4 bytes	
-double	4 bytes	
-bool	1 byte	
 
 
+
+<img width="653" height="571" alt="Screenshot (1297)" src="https://github.com/user-attachments/assets/d329a579-a02a-4eb5-99bc-9c213dd2e0f6" />
 
 ## Примери
 
