@@ -16,9 +16,8 @@
 Символен тип (char)
 
 
-
-
 <img width="653" height="571" alt="Screenshot (1297)" src="https://github.com/user-attachments/assets/d329a579-a02a-4eb5-99bc-9c213dd2e0f6" />
+
 
 ## Примери
 
