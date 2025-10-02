@@ -1,4 +1,4 @@
-### 1. 1. Променливи и примитивни типове
+### Променливи и примитивни типове
 
 Деклрация на променлива:
 <тип> <име> = (<стойност>)
@@ -18,8 +18,17 @@
 
 <img width="653" height="571" alt="Screenshot (1297)" src="https://github.com/user-attachments/assets/d329a579-a02a-4eb5-99bc-9c213dd2e0f6" />
 
+<img width="1147" height="836" alt="Screenshot (1298)" src="https://github.com/user-attachments/assets/a2ea3d28-dee1-40a2-aa62-9c5199ae0e2d" />
 
-## Примери
+
+<img width="1146" height="511" alt="Screenshot (1299)" src="https://github.com/user-attachments/assets/b9a7887f-01e9-4be4-bcb1-ad047e791da5" />
+
+<img width="928" height="397" alt="Screenshot (1300)" src="https://github.com/user-attachments/assets/b50ee9ab-1198-4966-a493-1f0f8e1eb4fa" />
+
+
+
+## Примери 
+
 
 **1.** Какво ще отпечата на екрана следният код?
 
