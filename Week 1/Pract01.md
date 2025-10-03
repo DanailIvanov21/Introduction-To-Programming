@@ -122,7 +122,7 @@ int main()
 **3.** Напишете програма, която извежда размерът на всички основни/примитивни типове в С++ (в байтове). Използвайте операторът sizeof() .
 
 
-Вход: int , double, float, char, short int, long int, long long int, unsigned int ...
+int, double, float, char, short int, long int, long long int, unsigned int ...
 
 Изход: 4, 8, 4, 1, 2, 4, 8, 4 ;
 
@@ -132,7 +132,7 @@ int main()
 
 Вход:
 ```c++
-481 444
+481444
 ```
 Изход:
 
