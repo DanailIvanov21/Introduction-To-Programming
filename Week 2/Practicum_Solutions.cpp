@@ -220,11 +220,20 @@ if (ch >= 'a' && ch <= 'z') {
 	std::cout << firstNum << " " << sign << " " << secondNum;
 
 //Task 11
-    int n;
+    
+int main() {
+int n;
     std::cin >> n;
     bool isEndingOn5 = n % 10 == 5;
     bool isDivisibleBy3And5 = n % 3 == 0 && n % 5 == 0;
 
+    std::cout << std::boolalpha; //true/false
+
+    std::cout << "Ends with 5: " << isEndingOn5 << std::endl;
+    std::cout << "Divisible by 3 and 5: " << isDivisibleBy3And5 << std::endl;
+
+    return 0;
+}
 //Task 12
 	int day, month, year;
 	std::cin >> day >> month >> year;
