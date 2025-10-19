@@ -253,6 +253,25 @@
 	}
 	std::cout << validDate;
 
+//Task 13
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+
+    int a = n / 100;        
+    int b = (n / 10) % 10; 
+    int c = n % 10; 
+
+    int product = a * b * c; 
+
+    if (product > k)
+        cout << "YES " << product + k;
+    else
+        cout << "NO " << k - product;
+
+    return 0;
+}
 
 //Task 14
 	double a, b, c;
@@ -283,7 +302,49 @@
 	else {
 		std::cout << "The equation has zero real roots." << std::endl;
 	}
+//Task 15
 
+int main() {
+    double a, b;
+    char op;
+    cin >> a >> b >> op;
+
+    switch (op) {
+        case '+': cout << a + b; break;
+        case '-': cout << a - b; break;
+        case '*': cout << a * b; break;
+        case '/': 
+            if (b != 0)
+                cout << a / b;
+            else
+                cout << "Division by zero!";
+            break;
+        default: 
+            cout << "Invalid operation!";
+    }
+
+    return 0;
+}
+//Task 16
+
+int main() {
+    int n;
+    cin >> n;
+
+    int last = n % 10;   
+    int newLast;         
+
+    if (last == 0 || last == 2 || last == 4 || last == 6 || last == 8)
+        newLast = last % 3;   
+    else
+        newLast = last % 2;   
+
+    n = (n / 10) * 10 + newLast;
+
+    cout << n;
+
+    return 0;
+}
 //Task 17
 	const int LETTER_DIFF = 'a' - 'A';
 	char lowerBoundA, upperBoundA, lowerBoundB, upperBoundB, letter;
