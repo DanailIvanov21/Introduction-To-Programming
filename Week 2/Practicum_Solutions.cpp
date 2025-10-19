@@ -129,7 +129,8 @@
 	    case 'E': std::cout << "vowel letter." << std::endl; break;
 	    default: std::cout << "consonant letter." << std::endl;
         
-	if (ch >= 'a' && ch <= 'z') {
+	}
+if (ch >= 'a' && ch <= 'z') {
 		std::cout << "Reversed lettter: " << (char)(ch - 'a' + 'A') << std::endl;
 	}
 	else if (ch >= 'A' && ch <= 'Z') {
