@@ -47,6 +47,8 @@ int main() {
     return 0;
 }
 
+
+
 // Задача 3
 void reverseFirstN(int arr[], int n, int N) {
     for (int i = 0; i < N / 2; i++) {
@@ -62,6 +64,10 @@ int main() {
 
     for (int i = 0; i < 7; i++) cout << arr[i] << " ";
 }
+
+
+
+
 // Задача 4
 void removeAt(int arr[], int &n, int index) {
     for (int i = index; i < n - 1; i++)
@@ -78,6 +84,9 @@ int main() {
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 }
+
+
+
 // Задача 5
 bool isSymmetric(int arr[], int n) {
     for (int i = 0; i < n / 2; i++) {
@@ -93,6 +102,9 @@ int main() {
     cout << (isSymmetric(arr1, 5) ? "yes" : "no") << endl;
     cout << (isSymmetric(arr2, 5) ? "yes" : "no") << endl;
 }
+
+
+
 // Задача 6
 int longestSequence(int arr[], int n) {
     int maxLen = 1, currentLen = 1;
@@ -112,6 +124,8 @@ int main() {
     cout << longestSequence(arr, 11);
 }
 
+
+
 // Задача 7
 void removeNegatives(int arr[], int &n) {
     int j = 0;
@@ -129,6 +143,8 @@ int main() {
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 }
+
+
 
 // Задача 8
 bool isSubarray(int a[], int n, int b[], int m) {
@@ -150,6 +166,9 @@ int main() {
     int b[] = {4, 0, 4};
     cout << boolalpha << isSubarray(a, 6, b, 3);
 }
+
+
+
 // Задача 9
 int digitSum(int n) {
     int sum = 0;
@@ -178,6 +197,8 @@ int main() {
     else
         cout << count;
 }
+
+
 
 // Задача 10
 bool isPermutation(int arr1[], int arr2[], int n) {
@@ -211,6 +232,9 @@ int main() {
 
     return 0;
 }
+
+
+
 
 // Задача 11
 bool isPalindrome(int arr[], int start, int end) {
@@ -261,6 +285,7 @@ int main() {
 }
 
 
+
 // Задача 13
 void makeZigZag(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
@@ -291,6 +316,9 @@ int main() {
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 }
+
+
+
 // Задача 14
 bool checkSumEqualMax(int arr[], int n) {
     int max = arr[0], sum = 0;
@@ -305,6 +333,8 @@ int main() {
     int arr[] = {8, 9, 17, 53, 12, 7};
     cout << (checkSumEqualMax(arr, 6) ? "Yes" : "No");
 }
+
+
 
 // Задача 15
 
