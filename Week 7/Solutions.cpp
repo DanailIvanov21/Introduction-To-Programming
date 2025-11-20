@@ -76,6 +76,8 @@ void add(char a[], char b[], int size, int k, char res[]) {
 
 }
 
+
+// for tasks 4 and 5 check the NumericSystemsConverter
 int main() {
 
     const int SIZE = 4;
