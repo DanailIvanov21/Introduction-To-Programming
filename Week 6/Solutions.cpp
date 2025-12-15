@@ -31,7 +31,6 @@ void printDiagonals(int a[][MAX], int n) {
 
 
 //3
-
 void printAboveBelowDiagonal(int a[][MAX], int n) {
     cout << "Above diagonal:" << endl;
     for (int i = 0; i < n; i++) {
@@ -51,7 +50,6 @@ void printAboveBelowDiagonal(int a[][MAX], int n) {
 }
 
 //4
-
 void printZigZag(int a[][MAX], int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         if (i % 2 == 0) {
@@ -69,7 +67,6 @@ void printZigZag(int a[][MAX], int rows, int cols) {
 
 
 //5
-
 bool isUpperTriangular(int a[][MAX], int n) {
     for (int i = 1; i < n; i++) {
         for (int j = 0; j < i; j++) {
@@ -82,7 +79,6 @@ bool isUpperTriangular(int a[][MAX], int n) {
 }
 
 //6
-
 void transpose(int a[][MAX], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
@@ -94,7 +90,6 @@ void transpose(int a[][MAX], int n) {
 }
 
 //7
-
 bool isSymmetric(int a[][MAX], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
@@ -107,7 +102,6 @@ bool isSymmetric(int a[][MAX], int n) {
 }
 
 //8
-
 bool isMagicSquare(int a[][MAX], int n) {
     int sum = 0;
 
@@ -141,7 +135,6 @@ bool isMagicSquare(int a[][MAX], int n) {
 }
 
 //9 
-
 void addMatrices(int a[][MAX], int b[][MAX], int res[][MAX], int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
@@ -159,7 +152,6 @@ void multiplyByNumber(int a[][MAX], int res[][MAX], int rows, int cols, int k) {
 }
 
 //10
-
 void multiplyMatrices(int a[][MAX], int b[][MAX], int res[][MAX],
                       int r1, int c1, int c2) {
     for (int i = 0; i < r1; i++) {
@@ -173,7 +165,6 @@ void multiplyMatrices(int a[][MAX], int b[][MAX], int res[][MAX],
 }
 
 //11
-
 void printSpiral(int a[][MAX], int rows, int cols) {
     int top = 0, bottom = rows - 1;
     int left = 0, right = cols - 1;
@@ -202,7 +193,6 @@ void printSpiral(int a[][MAX], int rows, int cols) {
 }
 
 //12
-
 void rotateRight(int a[][MAX], int res[][MAX], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
