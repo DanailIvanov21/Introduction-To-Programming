@@ -86,7 +86,6 @@ int findUnique(const int* arr, int n) {
 }
 
 //бонус2
-
 void printSubsets(const int* arr, int n) {
     int total = 1 << n;
 
@@ -101,7 +100,3 @@ void printSubsets(const int* arr, int n) {
         cout << "]\n";
     }
 }
-
-
-
-
