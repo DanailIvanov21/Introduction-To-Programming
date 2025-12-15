@@ -101,6 +101,7 @@ delete[] dynamicMatrix;
 <img width="647" height="587" alt="Screenshot (1432)" src="https://github.com/user-attachments/assets/a601455f-73c2-4f79-8cf0-5d51374fabb3" />
 
 
+
 **5.**  Даден е масив от стрингове, като всички стрингове са с равна дължина, равна на броя им. Да се напише функция, която намира всички палиндроми по редове, колони и двата диагонала, и съставя нов масив от стрингове от тях.
 
 Вход:
@@ -108,7 +109,8 @@ delete[] dynamicMatrix;
 4
 ```
 
-<img width="511" height="251" alt="Screenshot (1433)" src="https://github.com/user-attachments/assets/0f1e1130-642c-423b-b9b1-6525eac6a595" />
+<img width="517" height="256" alt="Screenshot (1434)" src="https://github.com/user-attachments/assets/4c13ca86-ca5b-47f7-b3d4-d30217346006" />
+
 
 
 
