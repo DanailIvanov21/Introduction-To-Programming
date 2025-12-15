@@ -1,5 +1,5 @@
-#inlcude std:iostream;
-using namespace std
+#include <iostream>
+using namespace std;
 const int MAX = 10;
 
 //1
