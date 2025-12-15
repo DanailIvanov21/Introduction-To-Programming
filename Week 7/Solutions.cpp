@@ -78,6 +78,44 @@ void add(char a[], char b[], int size, int k, char res[]) {
 
 
 // for tasks 4 and 5 check the NumericSystemsConverter
+
+bool isPalindromeInK(unsigned int num, int k) {
+    if (num == 0) return true;
+
+    char digits[32];
+    int size = 0;
+
+    while (num > 0) {
+        digits[size++] = getCharFromValue(num % k);
+        num /= k;
+    }
+
+    for (int i = 0; i < size / 2; i++) {
+        if (digits[i] != digits[size - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+bool areEqualInDifferentSystems(
+    char a[], int aSize, int k,
+    char b[], int bSize, int n
+) {
+    int valA = fromKto10(a, aSize, k);
+    int valB = fromKto10(b, bSize, n);
+
+    return valA == valB;
+}
+
+void convertKtoN(
+    char kSystem[], int kSize, int k,
+    char nSystem[], int& nSize, int n
+) {
+    int decimalValue = fromKto10(kSystem, kSize, k);
+    from10toN(decimalValue, nSystem, nSize, n);
+}
 int main() {
 
     const int SIZE = 4;
