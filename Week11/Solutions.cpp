@@ -198,6 +198,94 @@ char** findPalindromesEasy(char** m, int N, int& count) {
 }
 
 //6
+char** splitText(const char* text, char sep, int& outRows) {
+    outRows = 0;
+    if (!text) return nullptr;
+
+    
+    outRows = 1;
+    for (int i = 0; text[i]; i++)
+        if (text[i] == sep) outRows++;
+
+    char** words = new char*[outRows];
+
+    int start = 0;
+    int w = 0;
+
+    for (int i = 0; ; i++) {
+        if (text[i] == sep || text[i] == '\0') {
+            int len = i - start;
+            words[w] = new char[len + 1];
+            for (int k = 0; k < len; k++)
+                words[w][k] = text[start + k];
+            words[w][len] = '\0';
+            w++;
+            start = i + 1;
+        }
+        if (text[i] == '\0') break;
+    }
+
+    return words;
+}
 
 //7
+int** mergeRows(
+    const int* const* m, int rows, int cols,
+    int& newRows,
+    int*& rowSizes
+) {
+    if (rows <= 0 || cols <= 0) return nullptr;
+
+    newRows = (rows + 1) / 2;
+
+    int** res = new int*[newRows];
+    rowSizes = new int[newRows];
+
+    int pairs = rows / 2;
+
+    
+         for (int i = 0; i < pairs; i++) {
+        rowSizes[i] = 2 * cols;
+        res[i] = new int[2 * cols];
+
+        for (int j = 0; j < cols; j++) {
+            res[i][j] = m[i][j];
+            res[i][j + cols] = m[rows - 1 - i][j];
+        }
+    }
+
+    
+    if (rows % 2 == 1) {
+        int mid = rows / 2;
+        rowSizes[newRows - 1] = cols;
+        res[newRows - 1] = new int[cols];
+
+        for (int j = 0; j < cols; j++) {
+            res[newRows - 1][j] = m[mid][j];
+        }
+    }
+
+    return res;
+}
 //8
+char** zigzag3(const char* s, int& outRows, int& outCols) {
+    outRows = 3;
+    outCols = strLen(s);
+    if (outCols == 0) return nullptr;
+
+    char** m = createCharMatrix(outRows, outCols);
+    for (int i = 0; i < outRows; i++)
+        for (int j = 0; j < outCols; j++)
+            m[i][j] = ' ';
+
+    int r = 0;
+    int dir = 1; // 1 надолу, -1 нагоре
+    for (int c = 0; c < outCols; c++) {
+        m[r][c] = s[c];
+        if (r == 0) dir = 1;
+        if (r == outRows - 1) dir = -1;
+        r += dir;
+    }
+
+    return m;
+}
