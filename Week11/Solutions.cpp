@@ -268,7 +268,7 @@ int** mergeRows(
     return res;
 }
 //8
-char** zigzag3(const char* s, int& outRows, int& outCols) {
+char** zigzag(const char* s, int& outRows, int& outCols) {
     outRows = 3;
     outCols = strLen(s);
     if (outCols == 0) return nullptr;
@@ -288,4 +288,112 @@ char** zigzag3(const char* s, int& outRows, int& outCols) {
     }
 
     return m;
+}
+int main() {
+    int rows, cols;
+    cin >> rows >> cols;
+
+    int** m = createMatrix(rows, cols);
+    read(m, rows, cols);
+
+    int idx;
+    cin >> idx;
+    int** r1 = removeRow(m, rows, cols, idx);
+    print(r1, rows - 1, cols);
+    deleteMatrix(r1, rows - 1);
+
+    cin >> idx;
+    int** r2 = removeCol(m, rows, cols, idx);
+    print(r2, rows, cols - 1);
+    deleteMatrix(r2, rows);
+
+    int** t = transposeMatrix(m, rows, cols);
+    print(t, cols, rows);
+    deleteMatrix(t, cols);
+
+    int **odd, **even;
+    int oR, oC, eR, eC;
+    splitOddEven(m, rows, cols, odd, oR, oC, even, eR, eC);
+
+    if (odd) {
+        print(odd, oR, oC);
+        deleteMatrix(odd, oR);
+    }
+    if (even) {
+        print(even, eR, eC);
+        deleteMatrix(even, eR);
+    }
+
+    int newRows;
+    int* rowSizes;
+    int** merged = mergeRows(m, rows, cols, newRows, rowSizes);
+
+    for (int i = 0; i < newRows; i++) {
+        for (int j = 0; j < rowSizes[i]; j++)
+            cout << merged[i][j] << " ";
+        cout << endl;
+        delete[] merged[i];
+    }
+    delete[] merged;
+    delete[] rowSizes;
+
+    deleteMatrix(m, rows);
+
+    int N;
+    cin >> N;
+
+    char** square = new char*[N];
+    for (int i = 0; i < N; i++) {
+        char buf[256];
+        cin >> buf;
+        square[i] = copyFixedLenAsCStr(buf, N);
+    }
+
+    int palCount;
+    char** pals = findPalindromesEasy(square, N, palCount);
+
+    for (int i = 0; i < palCount; i++) {
+        cout << pals[i] << endl;
+        delete[] pals[i];
+    }
+    delete[] pals;
+
+    for (int i = 0; i < N; i++)
+        delete[] square[i];
+    delete[] square;
+
+    char text[256];
+    char sep;
+    cin >> text >> sep;
+
+    int words;
+    char** w = splitText(text, sep, words);
+
+    for (int i = 0; i < words; i++) {
+        cout << w[i] << endl;
+        delete[] w[i];
+    }
+    delete[] w;
+
+    char z[256];
+    cin >> z;
+
+    int zr, zc;
+    char** zig = zigZag(z, zr, zc);
+
+    for (int i = 0; i < zr; i++) {
+        for (int j = 0; j < zc; j++)
+            cout << zig[i][j];
+        cout << endl;
+        delete[] zig[i];
+    }
+    delete[] zig;
+
+    return 0;
+}
+
+
+    
+    
+    
 }
