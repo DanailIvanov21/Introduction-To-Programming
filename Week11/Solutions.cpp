@@ -1,4 +1,4 @@
-// Ползваме готовите фунцкии от Example.cpp за int масиви
+// Ползваме готовите фунцкии от example.cpp за int масиви
 // и ще изпозваме и новите готови фунцкии за char масиви преди
 // решенията на задачите
 
@@ -58,7 +58,7 @@ char* copyFixedLenAsCStr(const char* src, int len) {
     res[len] = '\0';
     return res;
 }
-1
+//1
 int** removeRow(const int* const* m, int rows, int cols, int idxRow) {
     if (rows <= 0 || cols <= 0) return nullptr;
     if (idxRow < 0 || idxRow >= rows) return nullptr;
@@ -165,7 +165,7 @@ char** findPalindromesEasy(char** m, int N, int& count) {
 
     char* temp = new char[N];
 
-    // ---- редове ----
+    
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) temp[j] = m[i][j];
         if (isPalindrome(temp, N)) {
@@ -173,7 +173,7 @@ char** findPalindromesEasy(char** m, int N, int& count) {
         }
     }
 
-    // ---- колони ----
+    
     for (int j = 0; j < N; j++) {
         for (int i = 0; i < N; i++) temp[i] = m[i][j];
         if (isPalindrome(temp, N)) {
@@ -181,13 +181,13 @@ char** findPalindromesEasy(char** m, int N, int& count) {
         }
     }
 
-    // ---- главен диагонал ----
+    
     for (int i = 0; i < N; i++) temp[i] = m[i][i];
     if (isPalindrome(temp, N)) {
         res[count++] = copyFixedLenAsCStr(temp, N);
     }
 
-    // ---- вторичен диагонал ----
+    
     for (int i = 0; i < N; i++) temp[i] = m[i][N - 1 - i];
     if (isPalindrome(temp, N)) {
         res[count++] = copyFixedLenAsCStr(temp, N);
@@ -196,3 +196,8 @@ char** findPalindromesEasy(char** m, int N, int& count) {
     delete[] temp;
     return res;
 }
+
+//6
+
+//7
+//8
