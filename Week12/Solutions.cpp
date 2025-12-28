@@ -1,6 +1,6 @@
-//За решението на задачите използваме написаните алгоритми
-// от https://github.com/DanailIvanov21/Introduction-To-Programming/blob/main/Week12/example.cpp
-
+//За решението на задачите използваме написаните алгоритми от example.cpp
+#include <iostream>
+using namespace std;
 //1
 bool findInMatrix(int** matrix, int rows, int cols, int value,
                   int& foundRow, int& foundCol)
