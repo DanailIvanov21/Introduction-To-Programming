@@ -68,4 +68,4 @@ int binarySearch(int arr[], int l, int r, int x)
     // If we reach here, then element was not present
     return -1;
 }
-```
+
